@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería ferromaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo-container"></div>
+            <img src="imagenes/ferreteria ferromaster.png" alt="Logo Ferretería" class="logo">
+            <h1>ferreteria ferromaster</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+
+                <!-- Menú de Productos -->
+                <li class="dropdown">
+                    <a href="#productos" class="dropbtn">Productos</a>
+                    <div class="dropdown-content">
+                        <a href="#herramientas">Herramientas</a>
+                        <a href="materiales.html">Materiales de Construcción</a>
+                        <a href="jardineria.html">Jardinería</a>
+                    </div>
+                </li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+        <button id="cart-button" onclick="openCart()">Carrito (0)</button>
+
+    </header>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="section">
+        <h2>HERRAMINETAS</h2>
+        <div class="product-container">
+            <!-- Producto 1 -->
+            <div class="product-card herramientas">
+                <img src="imagenes/martillo1.jpg" alt="Martillo Profesional">
+                <h3>Martillo Profesional</h3>
+                <p>Un martillo resistente para trabajos de construcción.</p>
+                <p class="price">$25.00</p>
+                <button onclick="addToCart('Martillo Profesional', 25)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card herramientas">
+                <img src="imagenes/Destornilladores1.jpg" alt="destornillador">
+                <h3>destornillador</h3>
+                <p>diferentes puntas diferentes proyectos.</p>
+                <p class="price">$15.00</p>
+                <button onclick="addToCart('destornillador', 15)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card herramientas">
+                <img src="imagenes/pulidora.jpg" alt="pulidora">
+                <h3>pulidora</h3>
+                <p> un servicio grantizado.</p>
+                </p class="price">$10.00</p>
+                <button onclick="addToCart('pulidora', 10)">Agregar al Carrito</button>
+            </div>
+
+            <div class="product-card herramientas"></div>
+                <img src="imagenes/Espatula.jpg" alt="espatula">
+                <h3>espatula</h3>
+                <p>un acessorio .</p>
+                <p class="price">$25.00</p>
+                <button onclick="addToCart('espatula', 25)">Agregar al Carrito</button>
+            </div>
+            <!-- Puedes agregar más productos -->
+        </div>
+    </section>
+     
+
+
+    <!-- Modal del Carrito de Compras -->
+    <div id="cart-modal" class="cart-modal">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-i tems"></div> <!-- Aquí se mostrarán los productos -->
+        <p id="cart-total"></p> <!-- Aquí se mostrará el total -->
+        <button onclick="closeCart()">Cerrar Carrito</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <p>Puedes contactarnos a través de nuestro correo: <a href="mailto:info@ferreteriamicasa.com">info@ferreteriaferromaster.com</a></p>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros" class="section">
+        <h2>Sobre Nosotros</h2>
+        <p>Ferretería ferromaster es tu opción de confianza para herramientas y productos de construcción. Contamos con más de 20 años de experiencia.</p>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 ferromaster. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería ferromaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo-container"></div>
+            <img src="imagenes/ferreteria ferromaster.png" alt="Logo Ferretería" class="logo">
+            <h1>ferreteria ferromaster</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <!-- Menú de Productos -->
+                <li class="dropdown">
+                    <a href="#productos" class="dropbtn">Productos</a>
+                    <div class="dropdown-content">
+                        <a href="herramientas.html">Herramientas</a>
+                        <a href="materiales.html">Materiales de Construcción</a>
+                        <a href="jardineria.html">Jardinería</a>
+                    </div>
+                </li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+        <button id="cart-button" onclick="openCart()">Carrito (0)</button>
+
+    </header>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="section">
+        <h2>materiales de construccion</h2>
+        <div class="product-container">
+            <!-- Ejemplo de un producto -->
+            <div class="product-card herramientas">
+                <img src="herramienta1.jpg" alt="Martillo Profesional">
+                <h3>Martillo Profesional</h3>
+                <p>Un martillo resistente para trabajos de construcción.</p>
+                <p class="price">$25.00</p>
+                <button onclick="addToCart('Martillo Profesional', 25)">Agregar al Carrito</button>
+            </div>
+
+            <div class="product-card herramientas">
+                <img src="herramienta2.jpg" alt="Destornillador">
+                <h3>Destornillador</h3>
+                <p>Destornillador multiusos con cabeza intercambiable.</p>
+                <p class="price">$15.00</p>
+                <button onclick="addToCart('Destornillador', 15)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Agrega más productos aquí -->
+        </div>
+    </section>
+
+    <!-- Modal del Carrito de Compras -->
+    <div id="cart-modal" class="cart-modal">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items"></div> <!-- Aquí se mostrarán los productos -->
+        <p id="cart-total"></p> <!-- Aquí se mostrará el total -->
+        <button onclick="closeCart()">Cerrar Carrito</button>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+    
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <p>Puedes contactarnos a través de nuestro correo: <a href="mailto:info@ferreteriamicasa.com">info@ferreteriamicasa.com</a></p>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros" class="section">
+        <h2>Sobre Nosotros</h2>
+        <p>Ferretería ferromaster es tu opción de confianza para herramientas y productos de construcción. Contamos con más de 20 años de experiencia.</p>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 ferromaster. Todos los derechos reservados.</p>
+    </footer>
+
+ 
+
+</body>
+
+
+</html>
